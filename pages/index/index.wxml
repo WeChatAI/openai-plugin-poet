@@ -1,13 +1,24 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<!-- 自定义导航 -->
+<view style="width: 100vw; height: 100vh;overflow: hidden;">
+  <view class='nav-wrap' style='width: 100vw; height: {{statusBarHeight}}px;'>
+    <view class="" style="height: {{status}}px"></view>
+    <view class='nav-title' style='position: relative;width: 100vw;text-align: center;height: {{navHeight}}px;line-height: {{navHeight}}px'>
+      <!-- <view bindtap="back" style="cursor: pointer;position: absolute; top:{{(navHeight - 16) /2}}px;left: 15px; width: 20px; height: 20px;" >
+        <image bindtap="back" style="cursor: pointer;position: absolute; top:0px; left: 0px; width: 9px;height: 16px;" src="https://res.wx.qq.com/mmspraiweb_node/dist/static/openaiplugin/img/arrow.png"></image>
+      </view> -->
+      <view class="">
+        小微写诗
+      </view>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view style="height: calc(100vh - {{statusBarHeight}}px);">
+    <chat id="component-id" bind:queryCallback="getQueryCallback" bind:backHome="goBackHome"
+      generic:textMessage="customTextMessage"
+      generic:weatherMessage="customWeatherMessage"
+      generic:imageMessage="costomImageMessage"
+      generic:guideCard="customGuideCard"
+      generic:queryMessage="customQuery"
+      generic:operateCard="customoperateCard">
+    </chat>
   </view>
 </view>

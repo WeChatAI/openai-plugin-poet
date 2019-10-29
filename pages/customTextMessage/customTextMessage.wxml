@@ -1,0 +1,38 @@
+<view class="container">
+  <view class="answer" >
+    <image class="answerimage" src="https://res.wx.qq.com/mmspraiweb_node/dist/static/openaiplugin/img/answerImage.png"></image>
+    <view class="leftView" wx:if="{{!xiaoweiValue}}">
+      <rich-text wx:if="{{isRitch}}" nodes="{{answer}}" bindtap="tap"></rich-text>
+      <text wx:else>{{msg.content}}</text>
+      <view class="imageView" wx:if="{{flag}}">
+        <image src="{{url}}" class="bg_img" alt=""></image>
+        <view class="scoreview" wx:if="{{score !== 0}}">
+          <view class="score">
+            评分:  {{score}}
+          </view>
+        </view>
+        <view wx:for="{{list}}" wx:key="item" class="first{{index}}" bindtap="choose" data-title="{{item.title}}">
+          <image class="bg_img_sim bg_img{{index}}"  src="{{item.url}}"></image>
+          <view class="first_word{{index}}">
+            <view class="simple_word">
+              {{item.title}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="xiaoweiview" wx:if="{{xiaoweiValue}}">
+      <view class="content">
+        <view class="text" wx:for="{{arr}}" wx:key="item">
+          <rich-text class="" nodes="{{item}}"></rich-text>
+        </view>
+      </view>
+      <view class="titleView">
+        <view class="empty"></view>
+        <view class="title">
+          {{query}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
