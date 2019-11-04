@@ -17,7 +17,7 @@ https://mp.weixin.qq.com/wxopen/plugindevdoc?appid=wx8c631f7e9f2465e1
 > 请在 `project.config.json` 中配置自己小程序的appid或测试ID
 > 此示例代码仅做为接入微信对话开放平台小程序插件的示例供开发者参考
 
-
+![配置](./image/bg.png)
 
 
 
