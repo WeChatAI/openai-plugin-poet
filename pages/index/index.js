@@ -22,8 +22,6 @@ Page({
         })
       }
     })
-    const chat = plugin.getChatComponent()
-    chat.send('小微写诗')
   },
   getQueryCallback: function (e) {
   
