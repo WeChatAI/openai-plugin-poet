@@ -12,6 +12,10 @@
 
 https://mp.weixin.qq.com/wxopen/plugindevdoc?appid=wx8c631f7e9f2465e1
 
+## 官方文档
+
+https://developers.weixin.qq.com/doc/aispeech/miniprogram/intro.html
+
 微信对话开放平台小程序插件复写示例提供了对插件的开放能力， 可以随意定制化。
 
 > 请在 `project.config.json` 中配置自己小程序的appid或测试ID
